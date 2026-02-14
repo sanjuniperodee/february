@@ -31,7 +31,7 @@ export default function TimelineCard({ event, unlocked, onPlayGame, index }) {
           <p className={styles.place}>{event.place}</p>
           <p className={styles.desc}>{event.description}</p>
           <div className={styles.links}>
-            {event.links.map((link) => (
+            {(event.links ?? []).map((link) => (
               <a key={link.label} href={link.href} target="_blank" rel="noopener">
                 {link.label}
               </a>
