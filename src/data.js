@@ -32,9 +32,9 @@ export const EVENTS = [
       { label: 'Телефон', href: 'tel:+77477877457' },
       { label: 'Сайт', href: 'https://gonchar-almaty.kz' },
     ],
-    gameType: 'hearts',
-    gameGoal: 7,
-    lockText: 'Собери 7 сердечек, чтобы открыть',
+    gameType: 'blockblast',
+    gameGoal: 5,
+    lockText: 'Очисти 5 линий в Block Blast, чтобы открыть',
   },
   {
     id: 3,
@@ -46,6 +46,9 @@ export const EVENTS = [
       { label: '2ГИС', href: 'https://go.2gis.com/T4ZBW' },
       { label: 'Телефон', href: 'tel:+77088431748' },
     ],
+    gameType: 'memory',
+    gameGoal: 6,
+    lockText: 'Найди все 6 пар, чтобы открыть',
   },
 ]
 
