@@ -1,0 +1,47 @@
+.section {
+  max-width: 42rem;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4.5vw, 2.25rem);
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+  margin: 0 0 0.5rem;
+}
+
+.note {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  margin: 0 0 1.5rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.link {
+  display: inline-block;
+  padding: 0.65rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--rose-deep);
+  border-radius: 999px;
+  border: 1px solid rgba(201, 123, 135, 0.4);
+  background: rgba(255, 255, 255, 0.9);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.link:hover {
+  background: var(--rose-deep);
+  color: #fff;
+  border-color: var(--rose-deep);
+  text-decoration: none;
+}

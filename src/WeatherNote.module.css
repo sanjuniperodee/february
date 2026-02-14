@@ -1,0 +1,21 @@
+.section {
+  max-width: 42rem;
+  margin: 0 auto 2rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.text {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  margin: 0;
+}
+
+.text a {
+  color: var(--rose-light);
+  font-weight: 500;
+}
+
+.text a:hover {
+  text-decoration: underline;
+}

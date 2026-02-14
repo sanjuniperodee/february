@@ -1,0 +1,42 @@
+.section {
+  max-width: 42rem;
+  margin: 0 auto 4rem;
+  padding: 2rem 1.5rem 0;
+  border-top: 1px solid rgba(201, 123, 135, 0.12);
+}
+
+.wrap {
+  perspective: 800px;
+}
+
+.block {
+  margin: 0;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(152deg, #fff 0%, #fff5f1 100%);
+  border-radius: var(--radius);
+  border: 1px solid rgba(201, 123, 135, 0.2);
+  box-shadow: 0 14px 36px rgba(99, 69, 64, 0.14);
+  font-style: italic;
+  color: var(--text-soft);
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.quote {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 3rem);
+  color: var(--rose);
+  opacity: 0.35;
+  line-height: 1;
+}
+
+.block p {
+  margin: 0;
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  line-height: 1.75;
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,123 @@
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+  border-top: 1px solid rgba(201, 123, 135, 0.2);
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 246, 241, 0.95) 100%);
+}
+
+.signature {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  color: var(--text-soft);
+  margin: 0;
+}
+
+.name {
+  display: inline-block;
+  margin-top: 0.25rem;
+  color: var(--rose-deep);
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.sub {
+  margin: 0.75rem 0 0;
+  font-size: clamp(0.875rem, 1.5vw, 0.9375rem);
+  font-style: italic;
+  color: var(--text-soft);
+  opacity: 0.9;
+}
+
+.backTop {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--rose-deep);
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 123, 135, 0.35);
+  background: rgba(255, 255, 255, 0.92);
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.backTop:hover {
+  color: #fff;
+  background: var(--rose-deep);
+  text-decoration: none;
+}
+
+.printBtn {
+  display: inline-block;
+  margin: 0.75rem 0 0;
+  padding: 0.45rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-soft);
+  background: transparent;
+  border: 1px solid rgba(184, 169, 158, 0.35);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.printBtn:hover {
+  color: var(--text);
+  border-color: var(--text-soft);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.footerHeart {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--rose);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.footerHeart:hover {
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.burst {
+  position: fixed;
+  pointer-events: none;
+  font-size: 1rem;
+  color: var(--rose);
+  z-index: 9999;
+  animation: burstUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0.9;
+}
+
+@keyframes burstUp {
+  to {
+    transform: translateY(-120px) scale(0.3);
+    opacity: 0;
+  }
+}
+
+.secret {
+  margin-top: 1rem;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--rose);
+}
+
+@media print {
+  .footerHeart,
+  .printBtn,
+  .backTop,
+  .secret {
+    display: none !important;
+  }
+}

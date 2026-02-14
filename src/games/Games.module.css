@@ -1,0 +1,280 @@
+.heartsField {
+  position: relative;
+  width: 100%;
+  min-height: 260px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff8f6 0%, #ffeceb 100%);
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: var(--rose-deep);
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.heartBig {
+  font-size: 2.5rem;
+}
+
+.heartsCombo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--gold);
+  pointer-events: none;
+  z-index: 5;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.heartsWon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--rose-deep);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.blockBlastWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.blockGridOuter {
+  position: relative;
+}
+
+.blockGrid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: 220px;
+  height: 220px;
+  gap: 2px;
+  padding: 6px;
+  border-radius: 10px;
+  background: #f8eeeb;
+}
+
+.blockGridGhost {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 2px;
+  padding: 6px;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.blockCellGhost {
+  background: rgba(214, 123, 140, 0.45);
+  border-radius: 4px;
+}
+
+.invalidPulse {
+  animation: invalidPulse 0.22s ease;
+}
+
+@keyframes invalidPulse {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+.blockCell {
+  border: none;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.blockCellFilled {
+  background: linear-gradient(145deg, #f2aab8 0%, #d77b8c 100%);
+}
+
+.blockControls {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.gameBtn,
+.gameBtnGhost {
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.8rem;
+  border: 1px solid transparent;
+}
+
+.gameBtn {
+  background: linear-gradient(145deg, var(--rose-deep) 0%, var(--rose) 100%);
+  color: #fff;
+}
+
+.gameBtnGhost {
+  background: #fff;
+  border-color: #ecd8d3;
+  color: #7d6265;
+}
+
+.blastLabel {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--text-soft);
+}
+
+.blockShape {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 18px);
+  grid-template-rows: repeat(var(--rows), 18px);
+  gap: 2px;
+  cursor: grab;
+  user-select: none;
+  background: transparent;
+}
+.blockShape:active {
+  cursor: grabbing;
+}
+
+.blockShapeCell {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  background: transparent;
+}
+
+.blockShapeCellOn {
+  background: linear-gradient(145deg, #e8bfd2 0%, #c687a5 100%);
+}
+
+.inlineGameOver p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #9b6a72;
+}
+
+/* Memory pairs */
+.memoryWrap {
+  padding: 0.5rem 0;
+}
+
+.memoryHint {
+  margin: 0 0 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  text-align: center;
+}
+
+.memoryMistakes {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  color: #8c6f68;
+  text-align: center;
+}
+
+.memoryMistakes strong {
+  color: var(--rose-deep);
+}
+
+.memoryLost {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #b5525c;
+  text-align: center;
+}
+
+.memoryCardDisabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.memoryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.memoryCard {
+  position: relative;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #e8d4d8 0%, #d4b8be 100%);
+  cursor: pointer;
+  font-size: 1.75rem;
+  color: var(--rose-deep);
+  box-shadow: 0 2px 8px rgba(120, 70, 75, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.memoryCard:hover:not(:disabled) {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(120, 70, 75, 0.25);
+}
+
+.memoryCard:disabled {
+  cursor: default;
+}
+
+.memoryFace,
+.memoryBack {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition: opacity 0.2s ease;
+}
+
+.memoryFace {
+  opacity: 0;
+  background: linear-gradient(145deg, #fff5f5 0%, #ffe8ec 100%);
+  color: var(--rose-deep);
+}
+
+.memoryBack {
+  opacity: 1;
+  background: linear-gradient(145deg, #e8d4d8 0%, #d4b8be 100%);
+  color: #9b7a80;
+  font-weight: 700;
+}
+
+.memoryCardOpen .memoryFace {
+  opacity: 1;
+}
+
+.memoryCardOpen .memoryBack {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.memoryCardMatch .memoryCardOpen .memoryFace {
+  background: linear-gradient(145deg, #d4e8d4 0%, #b8d4b8 100%);
+}
+.memoryCardMatch {
+  background: linear-gradient(145deg, #c8e0c8 0%, #b0d0b0 100%);
+  box-shadow: 0 0 0 2px rgba(100, 160, 100, 0.4);
+}

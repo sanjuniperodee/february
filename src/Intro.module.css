@@ -1,0 +1,56 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #fff7f3 0%, #ffece6 50%, #f7d8dd 100%);
+  pointer-events: none;
+}
+
+.curtain {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-deep);
+  transform-origin: left;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.heart {
+  display: block;
+  font-size: 3.5rem;
+  color: var(--rose);
+  margin-bottom: 0.75rem;
+}
+
+.text {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 1.25rem;
+  letter-spacing: 0.05em;
+}
+
+.loader {
+  width: 48px;
+  height: 3px;
+  margin: 0 auto;
+  background: rgba(201, 123, 135, 0.25);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.loaderBar {
+  display: block;
+  height: 100%;
+  width: 30%;
+  background: var(--rose);
+  border-radius: 3px;
+}
